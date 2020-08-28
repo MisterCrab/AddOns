@@ -1,0 +1,17 @@
+## Interface: 90001
+## Version: 28.08.20
+## Title: Interface Usage (Shadowlands)
+## Author: Aezay (Earthen Ring EU)
+## Notes: Interface Benchmark and Usage
+
+## Libs ##
+Libs\AzDropDown.lua
+
+## Core ##
+InterfaceUsage.lua
+
+## Polls ##
+Polls\addons.lua
+Polls\addonspam.lua
+Polls\eventcalls.lua
+Polls\framescripts.lua
