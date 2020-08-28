@@ -1,0 +1,12 @@
+tag 7d8c15d725e2750ec8d40398b7806debefa1a72a v.0.22
+Author:	Petr Grabovoy <varren@gmail.com>
+Date:	Sat Jul 28 07:54:10 2018 +0300
+
+8.0.1 fix
+
+commit ddc34bd8c7eb194bd4b2dc8c4e31d24dcef18406
+Author: Petr Grabovoy <varren@gmail.com>
+Date:   Sat Jul 28 07:51:11 2018 +0300
+
+    8.0.0 fix
+
