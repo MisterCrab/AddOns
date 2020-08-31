@@ -4,7 +4,7 @@ local addon_name, addon = ...
 local GetCurrencyListLink, GetGlyphLink, GetLootSlotLink, tinsert, strfind,
     strsplit, select, UnitAura, UnitBattlePetSpeciesID, UnitBuff, UnitDebuff,
     UnitGUID, UnitIsWildBattlePet, unpack, wipe
-    = GetCurrencyListLink, GetGlyphLink, GetLootSlotLink, tinsert, strfind,
+    = C_CurrencyInfo.GetCurrencyListLink, GetGlyphLink, GetLootSlotLink, tinsert, strfind,
     strsplit, select, UnitAura, UnitBattlePetSpeciesID, UnitBuff, UnitDebuff,
     UnitGUID, UnitIsWildBattlePet, unpack, wipe
 
