@@ -1602,8 +1602,11 @@ function TMW:TryGetNPCName(id)
 end
 
 -- From Blizzard_TutorialLogic.lua
-local GetAtlasInfo = _G.GetAtlasInfo or _G.C_Texture.GetAtlasInfo
 function TMW:FormatAtlasString(atlasName, trimPercent)
+	if not GetAtlasInfo then
+		-- Tex coords aren't supported by the new atlas string escape format
+		return string.format("|A:%s:0:0:0:0|a", atlasName);
+	end
 	local filename, width, height, txLeft, txRight, txTop, txBottom = GetAtlasInfo(atlasName);
 	trimPercent = trimPercent or 0
 

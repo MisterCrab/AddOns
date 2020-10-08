@@ -366,7 +366,7 @@ TMW:RegisterCallback("TMW_OPTIONS_LOADED", function()
 		local start = debugprofilestop()
 
 		local success = TMW.safecall(SpellCacher)
-		if success and spellsFailed < MAX_FAILED_SPELLS and spellID < 293000 then
+		if success and spellsFailed < MAX_FAILED_SPELLS and spellID < 293000 then -- temporary disable
 			-- Carry on. Keep iterating.
 		else
 			-- We're done, or we errored.

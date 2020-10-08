@@ -9,14 +9,12 @@
 -- Currently maintained by
 -- Cybeloras of Aerie Peak
 -- --------------------
-local _G, type = _G, type
 
 local TMW = TMW
 if not TMW then return end
 local L = TMW.L
 
-local C_LossOfControl = _G.C_LossOfControl
-if not C_LossOfControl then
+if not _G.C_LossOfControl then
 	return
 end
 
@@ -27,6 +25,8 @@ local GetEventInfo = C_LossOfControl.GetEventInfo or C_LossOfControl.GetActiveLo
 local GetNumEvents = C_LossOfControl.GetNumEvents or C_LossOfControl.GetActiveLossOfControlDataCount
 
 local strlowerCache = TMW.strlowerCache
+
+local wow_900 = select(4, GetBuildInfo()) >= 90000
 
 
 local Type = TMW.Classes.IconType:New("losecontrol")
@@ -88,9 +88,16 @@ local function LoseControl_OnUpdate(icon, time)
 
 	for eventIndex = 1, GetNumEvents() do 
 		local locType, spellID, text, texture, start, _, duration, lockoutSchool = GetEventInfo(eventIndex)
-		if type(locType) == "table" then 
-			locType, spellID, text, texture, start, duration, lockoutSchool = locType.locType, locType.spellID, locType.displayText, locType.iconTexture, locType.startTime, locType.duration, locType.lockoutSchool
-		end 
+		if wow_900 then
+			locType, spellID, text, texture, start, duration, lockoutSchool = 
+				locType.locType,
+				locType.spellID,
+				locType.displayText,
+				locType.iconTexture,
+				locType.startTime,
+				locType.duration,
+				locType.lockoutSchool
+		end
 		
 		local isValidType = LoseControlTypes[""]
 		if not isValidType then
