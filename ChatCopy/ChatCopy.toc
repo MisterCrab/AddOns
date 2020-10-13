@@ -1,0 +1,4 @@
+## Interface: 80000
+## Title: ChatCopy
+## Notes: Adds a button to the default chat window that allows to copy all messages
+ChatCopy.lua
